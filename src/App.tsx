@@ -31,7 +31,7 @@ function App() {
       const R = 80;  // Radius for our visualization purpose
       const centerX: any= 200;
       const centerY: any = 200;
-      for(let i = 0; i < 4; i++) {
+      for(let i = 0; i < 8; i++) {
           let point: any = getRandomPointInSphere(R);
           lines = [...lines, <line x1={centerX} y1={centerY} x2={point.x} y2={point.y} stroke={theme =='light' ? 'black' : 'white'} stroke-width="1" />]
           circles = [...circles, <circle cx={point.x} cy={point.y} r={Math.random()*8} stroke={theme =='light' ? 'black' : 'white'} fill=""/>]
