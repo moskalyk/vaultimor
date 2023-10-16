@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './index.scss'
-import { useTheme, Button, Box, IconButton, SunIcon} from '@0xsequence/design-system'
+import { useTheme, Button, Box } from '@0xsequence/design-system'
 import { sequence } from '0xsequence'
 
 let circles: any = []
@@ -49,6 +46,7 @@ function App() {
       setLoggedIn(true)
     }
   }
+
   React.useState(() => {
     if(!init){
       setInit(true)
@@ -92,7 +90,7 @@ function App() {
             <Box>
               <Button label="login" onClick={connect}/>
             </Box>
-            <marquee style={{position: 'fixed', fontFamily: 'Tilt Neon', bottom: '10px', left: '0px'}}>currently vaulted: {8} collectible(s) &nbsp;&nbsp;&nbsp;&nbsp; total size: {941} kb(s) &nbsp;&nbsp;&nbsp;&nbsp; total time: {22.7} day(s)</marquee>
+            <p style={{position: 'fixed', fontFamily: 'Tilt Neon', bottom: '10px', left: '0px'}}>currently vaulted: {8} collectible(s) &nbsp;&nbsp;&nbsp;&nbsp; total size: {941} kb(s) &nbsp;&nbsp;&nbsp;&nbsp; total time: {22.7} day(s)</p>
             <div>
             </div>
           </div>
