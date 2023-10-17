@@ -9,7 +9,7 @@ let circles: any = []
 let lines: any = []
 let time = 0
 
-const VAULTIMOR_CONTRACT = '0xB9433dfCc18A9BF36e61a78E494D1acA68474e3a'; // <- change this
+const VAULTIMOR_CONTRACT = '0x4D9C76334787f319c959DbE6665c52A081f81b73'; // <- change this
 
 function App() {
   const [init, setInit] = useState(false)
@@ -66,7 +66,7 @@ function App() {
     // Create a contract instance
     const contract = new ethers.Contract(VAULTIMOR_CONTRACT, abi, provider);
 
-    let value = await contract.vaults(0);
+    let value = await contract.getVault(0);
     console.log(value.toString());
   }
 
